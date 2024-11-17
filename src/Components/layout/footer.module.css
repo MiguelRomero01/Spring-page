@@ -1,0 +1,77 @@
+.footer {
+     background-color: #121212;
+     color: #ffffff;
+     padding: 20px;
+     text-align: center;
+     font-family: Arial, sans-serif;
+}
+
+.footerContent {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.footerLinks {
+     list-style: none;
+     padding: 0;
+     margin: 10px 0;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 15px;
+}
+
+.footerLinks a {
+     color: #ffffff;
+     text-decoration: none;
+     font-size: 14px;
+}
+
+.footerLinks a:hover {
+     text-decoration: underline;
+}
+
+.footerIcons {
+     display: flex;
+     gap: 15px;
+     margin-top: 15px;
+}
+
+.footerIcons a {
+     width: 40px;
+     height: 40px;
+     background-color: #0066ff;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-decoration: none;
+     color: #ffffff;
+     font-size: 18px;
+}
+
+.footerIcons a:hover {
+     background-color: #0052cc;
+}
+
+   /* Iconos personalizados */
+.iconLinkedin::before {
+     content: 'in';
+     font-family: Arial, sans-serif;
+}
+
+.iconTwitter::before {
+     content: 'X';
+     font-family: Arial, sans-serif;
+}
+
+.iconInstagram::before {
+     content: 'IG';
+     font-family: Arial, sans-serif;
+}
+
+.iconYoutube::before {
+     content: 'YT';
+     font-family: Arial, sans-serif;
+}
