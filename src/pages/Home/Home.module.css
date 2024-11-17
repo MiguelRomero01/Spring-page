@@ -1,0 +1,14 @@
+body{
+     overflow: hidden;
+}
+
+.scrollIndicator {
+     position: fixed;
+     top: 0;
+     left: 0;
+     height: 70px;
+     background: #3B8C66;
+     transform-origin: left;
+     width: 100%;
+     z-index: 100;
+}
