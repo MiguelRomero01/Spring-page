@@ -1,0 +1,18 @@
+.scrollIndicator {
+     position: fixed;
+     top: 0;
+     left: 0;
+     height: 70px;
+     background: #3B8C66;
+     transform-origin: left;
+     width: 100%;
+     z-index: 100;
+}
+
+.article-list {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px; /* Reduce el gap para adaptarse al nuevo ancho */
+     justify-content: center;
+}
+

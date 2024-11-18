@@ -24,6 +24,7 @@ const Navbar = () => {
           <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact</Link></li>
           <li><Link to="/carbon">Tu huella</Link></li>
+          <li><Link to="/news">News</Link></li>
         </ul>
 
       </div>
