@@ -2,11 +2,11 @@ import React, { useRef } from "react";
 import { motion, useScroll, useSpring } from 'framer-motion';
 
 import Home_Styles from './Home.module.css';
-import review_styles from '../../Components/common/review.module.css';
 
 import Carousel from "./components/carousel";
 import ShortInfo from "../../Components/common/Info";
-import Review from "../../Components/common/review";
+import Review from "./components/review";
+import Footer from "../../Components/layout/footer";
 
 function Home() {
     const scrollRef = useRef(null); // Referencia del contenedor scrollable
@@ -21,7 +21,7 @@ function Home() {
         <div
             ref={scrollRef}
             style={{
-                height: "100vh", // Altura para hacer que el contenedor sea scrollable
+                height: "93vh", // Altura para hacer que el contenedor sea scrollable
                 overflowY: "scroll", // Habilita el scroll
                 overflowX:"hidden",
             }}
@@ -43,20 +43,31 @@ function Home() {
                 linkButton='/About'
                 buttonText='Conoce tu huella'
             />
-            <div className={review_styles['review-list']}>
+
+            <ShortInfo 
+                image='/Images/Home/components/buenaVoluntad.jpg'
+                mainTitle='¿Tienes curiosidad?'
+                information='Si es así, entonces conocenos y entiende por qué amamos lo que hacemos'
+                linkButton='/About'
+                buttonText='Conócenos'
+            />
+
+            <div className={Home_Styles['review-list']}>
                 <Review
-                    photo='/Images/Home/components/huella-ecologica.jpg'
+                    photo='/Images/Home/components/persona1.jpg'
                     review='Todos tenemos un impacto en este planeta. Qué mejor que saberlo y disminuirlo ¿Cierto?'
                 />
                 <Review
-                    photo='/Images/Home/components/huella-ecologica.jpg'
+                    photo='/Images/Home/components/persona2.jpg'
                     review='Todos tenemos un impacto en este planeta. Qué mejor que saberlo y disminuirlo ¿Cierto?'
                 />
                 <Review
-                    photo='/Images/Home/components/huella-ecologica.jpg'
+                    photo='/Images/Home/components/persona3.jpg'
                     review='Todos tenemos un impacto en este planeta. Qué mejor que saberlo y disminuirlo ¿Cierto?'
                 />
             </div>
+
+            <Footer/>
         </div>
     );
 }

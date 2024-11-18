@@ -1,7 +1,3 @@
-body{
-     overflow: hidden;
-}
-
 .scrollIndicator {
      position: fixed;
      top: 0;
@@ -13,9 +9,10 @@ body{
      z-index: 100;
 }
 
-.review-list {
+.article-list {
      display: flex;
      flex-wrap: wrap;
-     gap: 150px;
+     gap: 20px; /* Reduce el gap para adaptarse al nuevo ancho */
      justify-content: center;
 }
+

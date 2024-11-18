@@ -1,0 +1,25 @@
+.article-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: calc(33.33% - 20px); /* Asegúrate de que el ancho de la tarjeta esté al 33.33% */
+     box-sizing: border-box;
+     padding: 15px;
+     border-radius: 10px;
+     height: 500px; /* Fija una altura para las tarjetas */
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     background-color: #fff;
+ }
+ 
+ .card-media {
+     height: 200px; /* Fija la altura de la imagen */
+     object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
+ }
+ 
+ .card-content {
+     flex-grow: 1; /* El contenido se adapta al tamaño disponible */
+     overflow: hidden; /* Evita el desbordamiento del texto */
+     padding-bottom: 20px; /* Añade algo de espacio al final */
+ }

@@ -1,0 +1,25 @@
+.about-container{
+     padding: 0px 10% 1% 10%;
+     text-align: center;
+}
+
+h2, .Text-about{
+     padding-left: 5%;
+     padding-right: 5%;
+     text-align: justify;
+}
+
+.about-container h2{
+     color: #000000;
+     font-size: 300%;
+}
+
+.about-container .Img-about{
+     margin-top: -30px;
+     width: 90%;
+     height: 65vh;
+}
+
+.Text-about{
+     font-size: 150%;
+}
