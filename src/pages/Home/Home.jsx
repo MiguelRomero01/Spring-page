@@ -6,7 +6,6 @@ import Home_Styles from './Home.module.css';
 import Carousel from "./components/carousel";
 import ShortInfo from "../../Components/common/Info";
 import Review from "./components/review";
-import Contact from "./components/Contact";
 import Footer from "../../Components/layout/footer";
 
 function Home() {
@@ -22,7 +21,7 @@ function Home() {
         <div
             ref={scrollRef}
             style={{
-                height: "95vh", // Altura para hacer que el contenedor sea scrollable
+                height: "93vh", // Altura para hacer que el contenedor sea scrollable
                 overflowY: "scroll", // Habilita el scroll
                 overflowX:"hidden",
             }}
@@ -68,7 +67,6 @@ function Home() {
                 />
             </div>
 
-            <Contact/>
             <Footer/>
         </div>
     );

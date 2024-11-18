@@ -5,9 +5,9 @@ function Footer() {
      return (
           <footer className={styles.footer}> 
                <div className={styles.footerContent}> 
-                    <p>© 2024 The Carbon</p>
+                    <p>© 2024 Spring</p>
                     <ul className={styles.footerLinks}>
-                         <li><a href="#carreras">Carreras</a></li>
+                         <li><a href="#carreras">Carrera</a></li>
                          <li><a href="#contactenos">Contáctenos</a></li>
                          <li><a href="#privacidad">Privacidad</a></li>
                          <li><a href="#cookies">Aviso sobre cookies</a></li>
