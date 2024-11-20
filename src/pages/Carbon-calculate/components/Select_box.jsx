@@ -16,7 +16,7 @@ export default function BasicSelect({ title, option1, option2, option3 }) {
 
   return (
     <div>
-      <Box sx={{ width: 200 }}>
+      <Box sx={{ width: 200, marginTop: 2}}>
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">{title}</InputLabel>
           <Select

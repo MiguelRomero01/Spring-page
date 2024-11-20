@@ -3,12 +3,20 @@
      flex-direction: column;
      align-items: center;
      text-align: center;
-     width: calc(33.33% - 20px);
+     width: calc(20% - 20px);
      box-sizing: border-box;
      padding: 15px;
      border-radius: 10px;
-     width: 20%;
-     height: 30%;
+     width: 15%;
+     height: 350px;
+     background-color: rgba(208, 204, 204, 0.489);
+     margin-bottom: 2%;
+     transition: all 0.14s linear;
+}
+
+.review-container:hover{
+     background-color: rgba(208, 204, 204, 0.696);
+     scale: 1.07;
 }
 
 .review-container img {

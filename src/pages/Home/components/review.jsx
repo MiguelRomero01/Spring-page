@@ -7,7 +7,7 @@ function Review({review, photo}) {
           <div className={review_styles['review-container']}>
                <img src={photo} alt="UserImage" />
                <p className={review_styles.userReview}>
-                    <PiQuotesDuotone /><br/>
+                    <PiQuotesDuotone style={{color:'black',fontSize:'25px'}}/><br/>
                     {review}
                </p>
           </div>

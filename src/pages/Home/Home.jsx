@@ -40,7 +40,7 @@ function Home() {
                 image='/Images/Home/components/huella-ecologica.jpg'
                 mainTitle='Descubre tu Huella de carbono'
                 information='Todos tenemos un impacto en este planeta. Qué mejor que saberlo y disminuirlo ¿Cierto?'
-                linkButton='/About'
+                linkButton='/carbon'
                 buttonText='Conoce tu huella'
             />
 
@@ -52,18 +52,26 @@ function Home() {
                 buttonText='Conócenos'
             />
 
+            <ShortInfo 
+                image='/Images/Home/components/noticias.jpg'
+                mainTitle='Descubre lo ultimo en noticias'
+                information='Ve a nuestra sección de noticias y descrubre como está el mundo actualmente en el medio ambiente'
+                linkButton='/About'
+                buttonText='Descubrélas aquí'
+            />
+
             <div className={Home_Styles['review-list']}>
                 <Review
                     photo='/Images/Home/components/persona1.jpg'
-                    review='Todos tenemos un impacto en este planeta. Qué mejor que saberlo y disminuirlo ¿Cierto?'
+                    review='Spring me permite ayudar al planeta de manera simple y efectiva. Participar en sus proyectos de reforestación y educación ambiental me hace sentir parte de un gran cambio. ¡Es inspirador!'
                 />
                 <Review
                     photo='/Images/Home/components/persona2.jpg'
-                    review='Todos tenemos un impacto en este planeta. Qué mejor que saberlo y disminuirlo ¿Cierto?'
+                    review='Con Spring descubrí que pequeñas acciones colectivas logran un gran impacto. Su forma de conectar a las personas con causas ambientales es motivadora y fácil de seguir. ¡Me encanta!'
                 />
                 <Review
                     photo='/Images/Home/components/persona3.jpg'
-                    review='Todos tenemos un impacto en este planeta. Qué mejor que saberlo y disminuirlo ¿Cierto?'
+                    review='Spring me enseñó que juntos podemos hacer la diferencia. Sus programas de reciclaje y eventos son prácticos y emocionantes. ¡Un servicio que realmente ayuda al planeta!'
                 />
             </div>
 

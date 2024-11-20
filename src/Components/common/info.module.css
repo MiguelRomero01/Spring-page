@@ -20,10 +20,10 @@
      scale: 1.01;
 }
 
-.MediaLeft img {
+.MediaLeft{
      margin-left: 6vw;
      max-width: 50%;
-     height: 50%; 
+     height: 70%; 
      flex: 1;
 }
 
@@ -39,14 +39,15 @@
 .mainText-container h2{
      color: #347355;
      font-size: 4rem;
-     text-align: center;
      font-weight: bolder;
 }
 
 .Text {
-     font-size: 2rem; 
-     line-height: 1.6; 
+     font-size: 2rem;
+     line-height: 1.6;
+     margin-left: 6%;
 }
+
 
 .info-Button{
      font-size: 1.5rem;

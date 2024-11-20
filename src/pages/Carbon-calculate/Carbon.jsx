@@ -23,7 +23,7 @@ function Carbon(){
         <div
             ref={scrollRef}
             style={{
-                height: "93vh", // Altura para hacer que el contenedor sea scrollable
+                height: "90vh", // Altura para hacer que el contenedor sea scrollable
                 overflowY: "scroll", // Habilita el scroll
                 overflowX:"hidden",
             }}

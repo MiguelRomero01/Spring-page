@@ -32,7 +32,7 @@ function Sliders() {
 
      return (
           <div>
-               <Box sx={{ width: 300 }}>
+               <Box sx={{ width: 300}}>
                     <Slider 
                          aria-label="Custom marks" 
                          defaultValue={5} 
@@ -44,6 +44,7 @@ function Sliders() {
                          marks={marks}
                          value={sliderValue} // Vincular al estado
                          onChange={handleSliderChange} // Manejar el cambio
+                         style={{color:'#93D94E'}}
                     />
                </Box>
                {/* Mostrar el valor actual */}
