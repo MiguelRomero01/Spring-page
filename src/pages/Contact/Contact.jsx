@@ -48,7 +48,7 @@ function Contact() {
                     <input 
                          type="submit" 
                          value="Enviar Mensaje" 
-                         className="btn-enviar"
+                         className={contact_styles["btn-enviar"]}
                     />
 
                     <input 

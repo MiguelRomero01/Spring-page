@@ -1,0 +1,12 @@
+.loginBtn{
+     scale: 1.1;
+     padding: 15px;
+     color: wheat;
+     background-color: transparent;
+     border-color: transparent;
+     transition: all 0.3s linear;
+}
+
+.loginBtn:hover{
+     scale: 1.2;
+}

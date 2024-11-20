@@ -14,7 +14,7 @@ function Home() {
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 300,
         damping: 30,
-        restDelta: 0.1
+        restDelta: 1
     });
 
     return (
@@ -56,7 +56,7 @@ function Home() {
                 image='/Images/Home/components/noticias.jpg'
                 mainTitle='Descubre lo ultimo en noticias'
                 information='Ve a nuestra sección de noticias y descrubre como está el mundo actualmente en el medio ambiente'
-                linkButton='/About'
+                linkButton='/news'
                 buttonText='Descubrélas aquí'
             />
 
@@ -74,7 +74,6 @@ function Home() {
                     review='Spring me enseñó que juntos podemos hacer la diferencia. Sus programas de reciclaje y eventos son prácticos y emocionantes. ¡Un servicio que realmente ayuda al planeta!'
                 />
             </div>
-
             <Footer/>
         </div>
     );

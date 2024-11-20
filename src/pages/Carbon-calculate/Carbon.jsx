@@ -1,64 +1,84 @@
-import React,{useRef} from "react";
-
+import React, { useRef, useState } from "react";
 import carbon_styles from './Carbon.module.css';
+
 import Sliders from "./components/Slider";
 import BasicSelect from "./components/Select_box";
-
 import { motion, useScroll, useSpring } from 'framer-motion';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import CalculateButton from "./components/Calculate";
 
-function Carbon(){
-  const scrollRef = useRef(null); // Referencia del contenedor scrollable
-  const { scrollYProgress } = useScroll({ container: scrollRef }); // Sincroniza con el contenedor
-  const scaleX = useSpring(scrollYProgress, {
-      stiffness: 300,
-      damping: 30,
-      restDelta: 0.1
-  });
-  return(
+function Carbon() {
+    const scrollRef = useRef(null);
+    const { scrollYProgress } = useScroll({ container: scrollRef });
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 300,
+        damping: 30,
+        restDelta: 0.1,
+    });
+
+    // Estado para almacenar los valores seleccionados
+    const [selectedValues, setSelectedValues] = useState({});
+    const [submittedValues, setSubmittedValues] = useState(null); // Para enviar los valores a Calculate
+
+
+    // Función para manejar los cambios
+    const handleValueChange = (question, value) => {
+        setSelectedValues((prev) => ({
+            ...prev,
+            [question]: value,
+        }));
+    };
+
+    // Función que se ejecuta al hacer clic en el botón
+    const handleSubmit = () => {
+        setSubmittedValues(selectedValues); // Actualiza los valores a enviar
+    };
+
+    return (
         <div
             ref={scrollRef}
             style={{
-                height: "90vh", // Altura para hacer que el contenedor sea scrollable
-                overflowY: "scroll", // Habilita el scroll
-                overflowX:"hidden",
+                height: "90vh",
+                overflowY: "scroll",
+                overflowX: "hidden",
             }}
         >
-            {/* Barra de progreso */}
             <motion.div
-                style={{
-                    scaleX, // Vincula con el progreso del scroll
-                }}
-                className={carbon_styles.scrollIndicator} 
+                style={{ scaleX }}
+                className={carbon_styles.scrollIndicator}
             />
 
-        {/*Transporte*/}
+            {/*Transporte*/}
         <Accordion defaultExpanded>
         <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1-content"
             id="panel1-header"
+            className={carbon_styles['Accordion-Elements']}
         >
-            <Typography>Transporte</Typography>
+            <Typography className={carbon_styles['Element-title']}>Transporte</Typography>
         </AccordionSummary>
 
         <AccordionDetails>
             <Typography>
                 {/*Question 1*/}
                 ¿Con qué frecuencia usas transporte público? del 1 al 10
-                <Sliders/>
+                <Sliders
+                    onValueChange={(value) => handleValueChange("Transp.publico", value)}
+                />
 
                 {/*Question 2*/}
                 ¿Qué tipo de vehiculo usas?
                 <BasicSelect
-                    title="Vehicle"
-                    option1="Carro"
+                    title="Vehiculo"
+                    option1="Bicicleta"
                     option2="Moto"
-                    option3="Bicicleta"
+                    option3="Carro"
+                    onValueChange={(value) => handleValueChange("Transporte", value)}
                 />
             </Typography>
             </AccordionDetails>
@@ -70,8 +90,9 @@ function Carbon(){
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2-content"
             id="panel2-header"
+            className={carbon_styles['Accordion-Elements']}
         >
-        <Typography>Consumo de Energía</Typography>
+        <Typography className={carbon_styles['Element-title']}>Consumo de Energía</Typography>
         </AccordionSummary>
 
         <AccordionDetails>
@@ -83,6 +104,7 @@ function Carbon(){
                     option1="Si"
                     option2="Tal vez"
                     option3="No"
+                    onValueChange={(value) => handleValueChange("EnergiaRenovable", value)}
                 />
 
                 {/*Question 2*/}
@@ -92,6 +114,7 @@ function Carbon(){
                     option1="Si"
                     option2="A veces"
                     option3="No"
+                    onValueChange={(value) => handleValueChange("DeconectaAparatos", value)}
                 />
             </Typography>
             </AccordionDetails>
@@ -103,8 +126,9 @@ function Carbon(){
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel3-content"
             id="panel3-header"
+            className={carbon_styles['Accordion-Elements']}
         >
-            <Typography>Alimentación</Typography>
+            <Typography className={carbon_styles['Element-title']}>Alimentación</Typography>
         </AccordionSummary>
 
         <AccordionDetails>
@@ -116,6 +140,7 @@ function Carbon(){
                     option1="0 veces"
                     option2="1-3 veces"
                     option3="mas de 4 veces"
+                    onValueChange={(value) => handleValueChange("Carne", value)}
                 />
 
                 {/*Question 2*/}
@@ -125,6 +150,7 @@ function Carbon(){
                     option1="Si"
                     option2="A veces"
                     option3="No"
+                    onValueChange={(value) => handleValueChange("ProdTemporada", value)}
                 />
             </Typography>
             </AccordionDetails>
@@ -136,15 +162,18 @@ function Carbon(){
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel4-content"
             id="panel4-header"
+            className={carbon_styles['Accordion-Elements']}
         >
-            <Typography>Consumo de bienes</Typography>
+            <Typography className={carbon_styles['Element-title']}>Consumo de bienes</Typography>
         </AccordionSummary>
 
         <AccordionDetails>
             <Typography>
                 {/*Question 1*/}
                 ¿Cuántos dispositivos electrónicos tienes en casa?
-                <Sliders/>
+                <Sliders
+                    onValueChange={(value) => handleValueChange("Disp.Electronicos", value)}
+                />
 
                 {/*Question 2*/}
                 ¿Con qué frecuencia compras ropa nueva?
@@ -153,15 +182,19 @@ function Carbon(){
                     option1="una vez"
                     option2="de 2 a 5 veces"
                     option3="mas de 6 veces"
+                    onValueChange={(value) => handleValueChange("RopaNueva", value)}
                 />
             </Typography>
             </AccordionDetails>
         </Accordion>
+            
+            {/* Botón para enviar los valores */}
+            <button className={carbon_styles['Calculate-btn']} onClick={handleSubmit}>Calcular tu Huella</button>
 
-        <button>Calcular tu huella</button>
-    </div>
+            {/* Muestra los valores enviados en el componente Calculate */}
+            {submittedValues && <CalculateButton value={submittedValues} />}
+        </div>
     );
 }
 
-
-export default Carbon
+export default Carbon;

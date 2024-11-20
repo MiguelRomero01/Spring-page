@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./footer.module.css"; 
+import { Link } from 'react-router-dom';  //Routers to pages
 
 function Footer() {
      return (
@@ -7,13 +8,11 @@ function Footer() {
                <div className={styles.footerContent}> 
                     <p>© 2024 Spring</p>
                     <ul className={styles.footerLinks}>
-                         <li><a href="#carreras">Carrera</a></li>
-                         <li><a href="#contactenos">Contáctenos</a></li>
-                         <li><a href="#privacidad">Privacidad</a></li>
-                         <li><a href="#cookies">Aviso sobre cookies</a></li>
-                         <li><a href="#terminos">Términos y condiciones</a></li>
+                         <li><Link to='/contact'>Contáctenos</Link></li>
+                         <li><Link to=''>Privacidad</Link></li>
+                         <li><Link to=''>Términos y condiciones</Link></li>
                     </ul>
-                    <div className={styles.footerIcons}> {/* styles.footerIcons */}
+                    <div className={styles.footerIcons}>
                          <a href="#linkedin" aria-label="LinkedIn" className={styles.iconLinkedin}></a>
                          <a href="#twitter" aria-label="X" className={styles.iconTwitter}></a>
                          <a href="#instagram" aria-label="Instagram" className={styles.iconInstagram}></a>
