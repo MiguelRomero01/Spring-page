@@ -10,6 +10,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CalculateButton from "./components/Calculate";
+import Footer from "../../Components/layout/footer";
 
 function Carbon() {
     const scrollRef = useRef(null);
@@ -193,6 +194,9 @@ function Carbon() {
 
             {/* Muestra los valores enviados en el componente Calculate */}
             {submittedValues && <CalculateButton value={submittedValues} />}
+
+<Footer/>
+
         </div>
     );
 }

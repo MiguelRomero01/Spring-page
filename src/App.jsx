@@ -8,7 +8,7 @@ import About from './pages/About/About'; // About page
 import Contact from './pages/Contact/Contact'; //Contact page
 import Carbon from './pages/Carbon-calculate/Carbon';
 import New from './pages/News/News';
-import ResponsiveAppBar from './Components/layout/Navbar';
+import ResponsiveAppBar from './Components/layout/navbar';
 
 const App = () => {
      return (

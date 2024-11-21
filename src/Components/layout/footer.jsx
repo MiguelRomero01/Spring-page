@@ -17,6 +17,7 @@ function Footer() {
                          <a href="#twitter" aria-label="X" className={styles.iconTwitter}></a>
                          <a href="#instagram" aria-label="Instagram" className={styles.iconInstagram}></a>
                          <a href="#youtube" aria-label="YouTube" className={styles.iconYoutube}></a>
+                         <a href="https://discord.gg/TbSCNph5" aria-label="Discord"className={styles.iconDiscord}><img src="/Images/Home/components/LogoDiscord.png"/></a>
                     </div>
                </div>
           </footer>
