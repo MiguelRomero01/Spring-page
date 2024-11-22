@@ -59,24 +59,3 @@
 .footerIcons a:hover {
      background-color: #0052cc;
 }
-
-   /* Iconos personalizados */
-.iconLinkedin::before {
-     content: 'in';
-     font-family: Arial, sans-serif;
-}
-
-.iconTwitter::before {
-     content: 'X';
-     font-family: Arial, sans-serif;
-}
-
-.iconInstagram::before {
-     content: 'IG';
-     font-family: Arial, sans-serif;
-}
-
-.iconYoutube::before {
-     content: 'YT';
-     font-family: Arial, sans-serif;
-}
